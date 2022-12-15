@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <style>
+         nav{
+            height:100px;
+            width:100%;
+            border: 2px solid black;
+            background-color: black;
+            display:flex;
+            align-items: center;
+            justify-content: space-between;
+            border:2px solid red;
+            position: fixed;
+            top:0px;
+            left:0px
+            
+        }
+        #logo{
+            display: flex;
+            align-items: center;
+            
+            color: aliceblue;
+            height:80%;
+            width:30%;
+            padding-left: 50px;
+            font-size: 50px;
+            font-style: italic;
+            font-weight: bolder;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        #nav-in{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+    
+            width:40%;
+            height:80%;
+            color:aliceblue;
+            font-size:25px;
+        }
+        span{
+            color: red;
+        }
+        #btn{
+            color:aliceblue;
+            background-color:red;
+            border-radius: 10px;
+            padding:10px;
+            font-size: 20px;
+            font-weight: bolder;
+        }
+        #btn:hover{
+            background-color: rgb(212, 16, 16);
+        }
+        #order{
+            display: flex;
+            align-items: center;
+        }
+        .nav-link{
+            color:aliceblue;
+            text-decoration: none;
+        }
+        #nav-in{
+            text-decoration: none;
+        }
+        #outer{
+            display: flex;
+        }
+        /* side-menu */
+        #side{
+            height:700px;
+            width:25%;
+            position:fixed;
+            margin-left: 50px;;
+            z-index: 1;
+            line-height: 50px; 
+            margin-top: 100px;
+            line-height: 35px; 
+        }
+        #side>h1{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-weight: bolder;
+            font-size: 40px;
+        }
+        #side>p{
+            font-size: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        #side>p:hover{
+            font-weight: bolder;
+            font-size:25px;
+        }
+        /* right-side-div */
+        #side2{
+            width:65%;
+           margin-left: 500px;
+            margin-top: 100px;
+        }
+        #side2-inner{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap:10px
+        }
+        .card{
+           height:600px;
+           width:500px;
+           font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+           padding-left: 20px;
+           background-color: antiquewhite;
+           border-radius: 20px;
+        }
+        .img{
+            height:50%;
+            width:100%px;
+            border-radius: 10px;
+        }
+        .cart-button{
+            background-color: red;
+            border: none;
+            color: aliceblue;
+            padding: 10px 20px;
+            border-radius: 20px;
+            margin-left: 50px;
+            font-size: 30px;
+        }
+        #filter{
+            height:50px;
+            width:300px;
+            background-color: red;
+            color: aliceblue;
+            border:none;
+            border-radius: 20px;
+            font-size: 20px;
+        }
+
+        /* icon */
+       .fa-solid{
+            margin-left: 10px;
+        }
+        #nav-btn{
+            text-decoration: none;
+            color: aliceblue;
+        }
+ 
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="navbar">
+            <nav>
+                <div id="logo"><a href="home.html" id="nav-in"><span>HOT</span>CHICKEN</a></div>
+                <div id="nav-in"> 
+                   <div><a href="menu.html" class="nav-link">Menu</a></div>
+                   <div id="order"><a class="nav-link" href="cart.html">order</a><img src="https://images.ctfassets.net/wtodlh47qxpt/6qtBVFuno7pdwOQ9RIvYm9/d13e9b7242980972cf49beddde2cc295/bucket_cart_icon.svg" alt=""></div>
+                   <div> <button id="btn"><a id="nav-btn" href="signIn.html">sign in</a> <i class="fa-solid fa-user"></i></button></div>
+                </div>   
+            </nav>
+        </div><br>
+        <div id="outer">
+             <!-- left-side-div -->
+             <div id="side">
+                 <img src="https://online.kfc.co.in/static/media/Stripes_Small_OffersIcon.87fc6256.svg" alt="">
+                 <h1>HOT CHICKEN MENU</h1>
+                 <p>CHICKEN BUCKETS</p>
+                 <p>EXCLUSIVE DEAL</p>
+                 <p>NEW LAUNCH</p>
+                 <p>BOX MEALS</p>
+                 <p>BURGERS</p>
+                 <p>SNACKS</p>
+                 <p>STYA HOME SPECIAL</p>
+                 <p>BEVERAGES</p>
+             </div>
+             <!-- right-side div -->
+            <div id="side2">
+                <select name="" id="filter">
+                    <option value="">All category</option>
+                    <option value="CHICKEN BUCKETS">CHICKEN BUCKETS</option>
+                    <option value="EXCLUSIVE DEAL">EXCLUSIVE DEAL</option>
+                    <option value="NEW LAUNCH">NEW LAUNCH</option>
+                    <option value="BIRYANI BUCKETS">BIRYANI BUCKETS</option>
+                    <option value="BOX MEALS">BOX MEALS</option>
+                    <option value="BURGERS">BURGERS</option>
+                    <option value="SNACKS">SNACKS</option>
+                    <option value="STAY HOME SPECIALS">STAY HOME SPECIALS</option>
+                    <option value="BEVERAGES">BEVERAGES</option>
+                </select> 
+                <div id="side2-inner">
+
+                </div>
+            </div>
+        </div>
+        
+
+    </div>
+</body>
+</html>
+<script>
+    let side2=document.getElementById("side2-inner")
+     let select=document.getElementById("filter")
+     let fetchedData=[]
+     select.addEventListener("change",()=>{
+        let filtered=fetchedData.filter((element)=>{
+            if(element.category===select.value){
+                return true
+            }else{
+                return false
+            }
+        })
+        displayProduct(filtered)
+        console.log(filtered)
+     })
+
+
+    fetch("food.json")
+    .then(response=>response.json())
+    .then((actualData)=>{
+        
+        fetchedData=actualData
+        displayProduct(actualData)
+    })
+    .catch((error)=>{
+        console.log(erroe)
+    })
+
+     function displayProduct(data){
+          side2.innerHTML=null;
+        data.forEach(element => {
+            
+            let card=document.createElement("div")
+            card.setAttribute("class","card")
+
+            let image=document.createElement("img")
+            image.setAttribute("src",element.image)
+            image.setAttribute("class","img")
+
+            let name=document.createElement("h1")
+            name.innerText=element.name;
+            let category=document.createElement("h2")
+            category.innerText=element.category
+            let price=document.createElement("h2")
+            price.innerText=element.price
+            
+            let button=document.createElement("button")
+            button.innerText="Add to cart +"
+            button.setAttribute("class","cart-button")
+            button.addEventListener("click",()=>{
+                let cartData=JSON.parse(localStorage.getItem("cart"))
+                if(cartData===null) cartData=[]
+                let isPresent=false
+                for(let i=0;i<cartData.length;i++){
+                    if(cartData[i].name===element.name){
+                        isPresent=true
+                        break;
+                    }
+                }
+                if(isPresent===true){
+                    alert("Product Alredy in Cart");
+                }else{
+                    cartData.push({...element,quantity:1});
+                    localStorage.setItem("cart",JSON.stringify(cartData));
+                    alert("Product Added to Cart");
+                }
+            })
+            
+            card.append(image,name,category,price,button)
+            side2.append(card)
+
+        });
+    }
+</script>
