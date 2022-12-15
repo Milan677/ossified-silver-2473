@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home page</title>
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
+    <style>
+       
+        nav{
+            height:100px;
+            width:100%;
+            border: 2px solid black;
+            background-color: black;
+            display:flex;
+            align-items: center;
+            justify-content: space-between;
+            border:2px solid red;
+        
+        }
+        #logo{
+            display: flex;
+            align-items: center;
+            
+            color: aliceblue;
+            height:80%;
+            width:30%;
+            padding-left: 50px;
+            font-size: 50px;
+            font-style: italic;
+            font-weight: bolder;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        #nav-in{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+    
+            width:40%;
+            height:80%;
+            color:aliceblue;
+            font-size:25px;
+        }
+        span{
+            color: red;
+        }
+        #btn{
+            color:aliceblue;
+            background-color:red;
+            border-radius: 10px;
+            padding:10px;
+            font-size: 20px;
+            font-weight: bolder;
+        }
+        #btn:hover{
+            background-color: rgb(212, 16, 16);
+        }
+        #order{
+            display: flex;
+            align-items: center;
+        }
+        .nav-link{
+            color:aliceblue;
+            text-decoration: none;
+        }
+        #nav-in{
+            text-decoration: none;
+        }
+        
+
+        /* poster part */
+        #poster{
+            height:500px;
+            width:100%;  
+        }
+        #poster img{
+            height:100%;
+            width:100%
+        }
+        /* welcome */
+        #welcome{
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            height:150px;
+            width:87%;
+            background-color: rgba(235, 224, 224, 0.963);
+            padding-left: 200px;
+            font-weight: bold;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+        }
+        /* category */
+        #category{
+            width:100%;
+            height:600px;
+        
+        }
+        #category>div:nth-child(1){
+            display: flex;
+        }
+        #category>h1{
+            padding-left: 230px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        #inner-category{
+            display: grid;
+            grid-template-columns: repeat(4,250px);
+            height:90%;
+            width:70%;
+            margin:auto;
+            gap:20px
+        }
+        #inner-category>div{
+            
+            font-size: 10px;
+            font-weight: bold;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-align: center;
+            background-color: rgb(249, 238, 238);
+            
+        }
+        #inner-category img{
+            height:70%;
+            width:100%
+        }
+
+        /* offers and dwals */
+        #offers{
+            height:1300px;
+            width:100%;
+            background-color: black;
+        }
+        #offers>div:nth-child(1){
+           
+            width:80%;
+            height:100px; 
+            color: aliceblue;
+            margin: auto;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-weight: bolder;
+            padding-top: 100px;
+        }
+
+        /* slide */
+        .main-carousel{
+       height:550px;
+       width:90%;
+       border: 2px solid black;
+       background-color: black;
+       margin: auto;
+     }
+     .carousel-cell{
+       height:98%;
+       width:25%;
+       background-color: white;
+       margin-right: 10px;
+       border-radius: 10px;
+     }
+     .carousel-cell>img{
+           height:50%;
+            width:100%;
+            border-radius: 10px;
+            border: 1px solid green;
+            
+     }
+     .carousel-cell>h1{
+       color: red;
+       padding-left: 10px;
+     }
+     .carousel-cell>p{
+           color:black; 
+           padding-left: 10px;
+        }
+         .cards-foot{
+           display:flex;
+           justify-content: space-around;
+           align-items: center;
+           font-size: large;
+        } 
+        .cards-foot>button{
+            padding:10px 20px;
+            border-radius: 30px;
+        }
+        .cards-foot>button:hover{
+            background-color: black;
+            color: aliceblue;
+        }
+       
+       .carousel-cell::before{
+           display: block;
+        }
+        .btn{
+            text-decoration: none;
+        }
+        .btn:hover{
+            color: aliceblue;
+        }
+       
+
+        /* description */
+        #offers>div:nth-child(3){
+            height:300px;
+            width:80%;
+            margin: auto;
+            margin-top: 100px;
+            display: flex;
+        }
+        #desc>div:nth-child(1){
+           height:100px;
+           width:100px;
+
+        }
+        #desc>div>img{
+            height:100%;
+            width:90%
+        }
+        #desc>div{
+            height:100%;
+            width:15%;
+            color:aliceblue  
+        }
+        #desc>div>:nth-child(6),:nth-child(7){
+            height:5px;
+            width:100px;
+            border-radius:10px;
+           
+        }
+        #offers>p{
+            color: aliceblue;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="navbar">
+            <nav>
+                <div id="logo"><a href="home.html" id="nav-in"><span>HOT</span>CHICKEN</a></div>
+                <div id="nav-in"> 
+                   <div><a href="menu.html" class="nav-link">Menu</a></div>
+                   <div id="order"><a href="cart.html"class="nav-link">order</a><img src="https://images.ctfassets.net/wtodlh47qxpt/6qtBVFuno7pdwOQ9RIvYm9/d13e9b7242980972cf49beddde2cc295/bucket_cart_icon.svg" alt=""></div>
+                   <div> <button id="btn">sign in</button></div>
+                </div>   
+            </nav>
+        </div>
+        <!-- poster part -->
+        <div id="poster">
+            <img src="https://images.ctfassets.net/wtodlh47qxpt/4gztBB8yAvtp6jV7JAuLD/093fddbb77a78a44a4d3d5e066c592de/KFC_Peri_Peri_Banner__1440x396px.jpg?w=756&fit=fill&fm=webp" alt="error">
+        </div>
+        <!-- welcome part -->
+        <div id="welcome">
+            <h1>WELCOME TO <span>HOT</span>CHICKEN !</h1>
+        </div>
+        <!-- category -->
+        <div id="category"> 
+                 <h1>BROUSE CATEGORIES</h1>
+            <div id="inner-category">
+                
+                 <div>
+                 <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/categories/CAT86.jpg?ver=22.82" alt="">
+                 <h1>CHICKEN BUCKET</h1>
+                </div>
+                 <div>
+                    <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/categories/CAT208.jpg?ver=22.82" alt="">
+                 <h1>EXCLUSIVE DEAL</h1>
+                 </div>
+                 <div>
+                    <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/categories/CAT200.jpg?ver=22.82" alt="">
+                 <h1>NEW LAUNCH</h1>
+                 </div>
+                 <div>
+                    <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/categories/CAT190.jpg?ver=22.82" alt="">
+                     <h1>BIRYANI BUCKET</h1>
+                 </div>
+                 <div>
+                    <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/categories/CAT158.jpg?ver=22.82" alt="">
+                    <h1>BOX MEAL</h1>
+                </div>
+                 <div>
+                    <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/categories/CAT158.jpg?ver=22.82" alt="">
+                    <h1>BURGER</h1>
+                </div>
+                <div>
+                    <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/categories/CAT89.jpg?ver=22.82" alt="">
+                    <h1>SNACKS</h1>
+                </div>
+                 <div>
+                    <img src="https://online.kfc.co.in/static/media/finger_lickin.fc21c805.svg" alt="">
+                    <h2><a href="menu.html">view all menu---></a></h2>
+                 </div>
+            </div>
+        </div>
+        <!-- offers & deals -->
+        <div id="offers">
+             <div>
+                <h1>OFFERS & DEALS</h1>
+             </div>
+             <!-- slider -->
+             <div class="main-carousel" data-flickity='{ "cellAlign": "left", "contain": true }'> 
+                <div class="carousel-cell">
+                  <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/offers/lg/CHKZINGER.jpg" alt="">
+                  <h1>1 PC FREE CHICKEN.. </h1>
+                  <p>1 pc free chicken zinger on a cart value of 499 or above on first order.Only for...</p>
+                  <div class="cards-foot">
+                      <a href="viewDetails.html">view details</a>
+                       <button><a class="btn" href="redeem.html">Reedem</a></button>
+                   </div>
+                </div>
+                <div class="carousel-cell">
+                  <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/no-image.jpg" alt="">
+                  <H1>ADD 2 PC HOT N..</H1>
+                  <p>Add 2 pc Hot n crispy chicken @ just Rs 99 on min cart value of Rs 499 or more...</p>
+                  <div class="cards-foot">
+                      <a href="viewDetails.html">view details</a>
+                      <button><a class="btn"href="redeem.html">Reedem</a></button>
+                   </div>
+                </div>
+                <div class="carousel-cell">
+                  <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/offers/lg/VEGZINGER.jpg" alt="">
+                  <h1>1 PC FREE VEG...</h1>
+                  <p>1 pc free veg zinger on a cart value of 499 or above on first order.Only for... </p>
+                  <div class="cards-foot">
+                      <a href="viewDetails.html">view details</a>
+                      <button><a class="btn"href="redeem.html">Reedem</a></button>
+                   </div>
+                </div>
+                <div class="carousel-cell">
+                  <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/no-image.jpg" alt="">
+                  <h1>1 PC FREE VEG...</h1>
+                  <p>1 pc free veg zinger on a cart value of 499 or above on first order.Only for... </p>
+                  <div class="cards-foot">
+                      <a href="viewDetails.html">view details</a>
+                      <button><a class="btn"href="redeem.html">Reedem</a></button>
+                   </div>
+                </div>
+                <div class="carousel-cell">
+                  <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/offers/lg/VEGZINGER.jpg" alt="">
+                                  <h1>1 PC FREE VEG...</h1>
+                                  <p>1 pc free veg zinger on a cart value of 499 or above on first order.Only for... </p>
+                                  <div class="cards-foot">
+                                      <a href="viewDetails.html">view details</a>
+                                       <button><a class="btn" href="redeem.html">Reedem</a></button>
+                                   </div>
+                </div>
+                <div class="carousel-cell">
+                  <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/no-image.jpg" alt="">
+                  <h1>1 PC FREE VEG...</h1>
+                  <p>1 pc free veg zinger on a cart value of 499 or above on first order.Only for... </p>
+                  <div class="cards-foot">
+                      <a href="viewDetails.html">view details</a>
+                      <button><a class="btn"href="redeem.html">Reedem</a></button>
+                   </div>
+                </div>
+              </div>
+             
+             
+            
+             <!-- description -->
+            <div id="desc">
+                <div>
+                    <img src="https://images.ctfassets.net/wtodlh47qxpt/25FSYFuEtGct8NSrtpKe6d/b602f6fe0bf294e6a6dff5d7648bf594/KFC_Logo.svg" alt="">
+                </div>
+                <div>
+                    <h3>KFC Food</h3>
+                    <h3>Menu</h3>
+                    <h3>Order Lookup</h3>
+                    <h3>Gift Card</h3>
+                    <h3>Nutrition & Allergens</h3>
+                </div>
+                <div>
+                    <h3>Support</h3>
+                    <h3>Get Help</h3>
+                    <h3>Contact Us</h3>
+                    <h3>HOTCHICKEN Feedback</h3>
+                    <h3>Privacy Policy</h3>
+                </div>
+                <div>
+                    <h3>Legal</h3>
+                    <h3>Term & Condition</h3>
+                    <h3>Privacy Policy</h3>
+                    <h3>Disclamer</h3>
+                    <h3>Caution Npotice</h3>
+                </div>
+                <div>
+                    <h3>HOTCHICKEN india</h3>
+                    <h3>About hotchicken</h3>
+                    <h3>Hotchicken care</h3>
+                    <h3>Careers</h3>
+                    <h3>Our Golden Past</h3>
+                </div>
+                <div>
+                    <img src="https://images.ctfassets.net/wtodlh47qxpt/6BdZsyjLn64c06uCIE73d1/fb530f5d5231533b049463f6c7e8a2b1/google_play.svg" alt="">
+                </div>
+                <div>
+                    <img src="https://images.ctfassets.net/wtodlh47qxpt/em3mcMuAdXWlgucSJiTbS/d3ae7e51ed101d829e459355e255c47f/apple.svg" alt="">
+                </div>
+                
+            </div>
+             <p>Copyright @ HOTCHICKEN corporation 2021 All Right Reserved</p>
+        </div>
+        
+        </div>
+    </div>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+</body>
+</html>
