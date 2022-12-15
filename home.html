@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>home page</title>
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <style>
        
         nav{
@@ -18,6 +18,9 @@
             align-items: center;
             justify-content: space-between;
             border:2px solid red;
+            position: fixed;
+            z-index:100;
+            top:0px
         
         }
         #logo{
@@ -53,6 +56,8 @@
             padding:10px;
             font-size: 20px;
             font-weight: bolder;
+            display: flex;
+            justify-content:space-around;
         }
         #btn:hover{
             background-color: rgb(212, 16, 16);
@@ -143,8 +148,6 @@
             font-weight: bolder;
             padding-top: 100px;
         }
-
-        /* slide */
         .main-carousel{
        height:550px;
        width:90%;
@@ -192,10 +195,10 @@
        .carousel-cell::before{
            display: block;
         }
-        .btn{
+        .redeem{
             text-decoration: none;
         }
-        .btn:hover{
+        .redeem:hover{
             color: aliceblue;
         }
        
@@ -233,6 +236,17 @@
             text-align: center;
         }
 
+        /* icons */
+        .fa-solid{
+            margin-left: 10px;
+        }
+
+        #nav-btn{
+            text-decoration: none;
+            color: aliceblue;
+        }
+
+        
     </style>
 </head>
 <body>
@@ -243,7 +257,7 @@
                 <div id="nav-in"> 
                    <div><a href="menu.html" class="nav-link">Menu</a></div>
                    <div id="order"><a href="cart.html"class="nav-link">order</a><img src="https://images.ctfassets.net/wtodlh47qxpt/6qtBVFuno7pdwOQ9RIvYm9/d13e9b7242980972cf49beddde2cc295/bucket_cart_icon.svg" alt=""></div>
-                   <div> <button id="btn">sign in</button></div>
+                   <div> <button id="btn"><a id="nav-btn" href="signIn.html">sign in</a> <i class="fa-solid fa-user"></i></button></div>
                 </div>   
             </nav>
         </div>
@@ -307,7 +321,7 @@
                   <p>1 pc free chicken zinger on a cart value of 499 or above on first order.Only for...</p>
                   <div class="cards-foot">
                       <a href="viewDetails.html">view details</a>
-                       <button><a class="btn" href="redeem.html">Reedem</a></button>
+                       <button><a class="redeem"href="redeem.html">Redeem</a></button>
                    </div>
                 </div>
                 <div class="carousel-cell">
@@ -316,7 +330,7 @@
                   <p>Add 2 pc Hot n crispy chicken @ just Rs 99 on min cart value of Rs 499 or more...</p>
                   <div class="cards-foot">
                       <a href="viewDetails.html">view details</a>
-                      <button><a class="btn"href="redeem.html">Reedem</a></button>
+                      <button><a class="redeem"href="redeem.html">Redeem</a></button>
                    </div>
                 </div>
                 <div class="carousel-cell">
@@ -325,7 +339,7 @@
                   <p>1 pc free veg zinger on a cart value of 499 or above on first order.Only for... </p>
                   <div class="cards-foot">
                       <a href="viewDetails.html">view details</a>
-                      <button><a class="btn"href="redeem.html">Reedem</a></button>
+                      <button><a class="redeem"href="redeem.html">Redeem</a></button>
                    </div>
                 </div>
                 <div class="carousel-cell">
@@ -334,7 +348,7 @@
                   <p>1 pc free veg zinger on a cart value of 499 or above on first order.Only for... </p>
                   <div class="cards-foot">
                       <a href="viewDetails.html">view details</a>
-                      <button><a class="btn"href="redeem.html">Reedem</a></button>
+                      <button><a class="redeem"href="redeem.html">Redeem</a></button>
                    </div>
                 </div>
                 <div class="carousel-cell">
@@ -343,7 +357,7 @@
                                   <p>1 pc free veg zinger on a cart value of 499 or above on first order.Only for... </p>
                                   <div class="cards-foot">
                                       <a href="viewDetails.html">view details</a>
-                                       <button><a class="btn" href="redeem.html">Reedem</a></button>
+                                      <button><a class="redeem"href="redeem.html">Redeem</a></button>
                                    </div>
                 </div>
                 <div class="carousel-cell">
@@ -352,7 +366,7 @@
                   <p>1 pc free veg zinger on a cart value of 499 or above on first order.Only for... </p>
                   <div class="cards-foot">
                       <a href="viewDetails.html">view details</a>
-                      <button><a class="btn"href="redeem.html">Reedem</a></button>
+                      <button><a class="redeem"href="redeem.html">Redeem</a></button>
                    </div>
                 </div>
               </div>
