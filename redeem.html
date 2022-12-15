@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redeem page</title>
+    <style>
+        #box{
+            height:800px;
+            width:100%;
+            display: flex; 
+        }
+        #box>div{
+            height:70%;
+            width:50%;
+            margin: auto;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+        #box>div>div:nth-child(1){
+        
+        font-size: 25px;
+        font-weight: bold;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        padding-left: 20px;
+       
+       }
+         #box>div>div:nth-child(2){
+            height:80%;
+            width:60%;
+            text-align: center;
+            margin: auto;
+        }
+        h2{
+            font-size: 30px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        button{
+            background-color: white;
+            padding:15px 80px;
+            border-radius: 30px;
+            font-size: 20px;
+        } 
+        a{
+           text-decoration: none; 
+           color: black;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div>
+            <div>
+             <h1><a href="home.html">START YOUR ORDER</a></h1> 
+             <hr>
+            </div>
+            
+            <div>
+              <h2>HOW WOULD YOU LIKE TO RECEIVE YOUR ORDER?</h2>
+              <button id="one">Delivery</button><br><br>
+              <button id="two">Pick-up</button><br><br>
+              <button id="three">Dine In</button>
+              
+            </div>
+         </div>
+    </div>
+</body>
+</html>
+<script>
+   let btn1=document.getElementById("one")
+   let btn2=document.getElementById("two")
+   let btn3=document.getElementById("three")
+
+   btn1.addEventListener("click",()=>{
+      alert("you choose Delivery")
+   })
+
+   btn2.addEventListener("click",()=>{
+      alert("you choose Pick-up")
+   })
+   btn3.addEventListener("click",()=>{
+      alert("you choose Dine-in")
+   })
+</script>
