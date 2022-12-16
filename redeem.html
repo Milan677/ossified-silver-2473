@@ -10,7 +10,8 @@
         #box{
             height:800px;
             width:100%;
-            display: flex; 
+            display: flex;
+            flex-direction: column; 
         }
         #box>div{
             height:70%;
@@ -53,10 +54,19 @@
             position:relative;
             top:-25px
         } 
+        #btn{
+            border:none;
+            color:green;
+            display:block;
+            background-color: aliceblue;
+            font-size: 30px;
+            display:none
+        }
     </style>
 </head>
 <body>
     <div id="box">
+        <button id="btn"><i class="fa-regular fa-circle-check"></i> order successful</button>
         <div>
             <div>
              <h1>START YOUR ORDER<a href="home.html"><i class="fa-solid fa-circle-xmark"></i></a></h1> 
@@ -79,13 +89,26 @@
    let btn3=document.getElementById("three")
 
    btn1.addEventListener("click",()=>{
-      alert("you choose Delivery")
+      let btn=document.getElementById("btn")
+      btn.style.display="inline"
+      setTimeout(()=>{
+        window.open("home.html")
+      },2500)
+      
    })
 
    btn2.addEventListener("click",()=>{
-      alert("you choose Pick-up")
+    let btn=document.getElementById("btn")
+      btn.style.display="inline"
+      setTimeout(()=>{
+        window.open("home.html")
+      },2500)
    })
    btn3.addEventListener("click",()=>{
-      alert("you choose Dine-in")
+    let btn=document.getElementById("btn")
+      btn.style.display="inline"
+      setTimeout(()=>{
+        window.open("home.html")
+      },2500)
    })
 </script>
