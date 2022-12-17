@@ -119,6 +119,7 @@
             height:50%;
             width:100%px;
             border-radius: 10px;
+            
         }
         .cart-button{
             background-color: red;
@@ -190,6 +191,7 @@
                     <option value="STAY HOME SPECIALS">STAY HOME SPECIALS</option>
                     <option value="BEVERAGES">BEVERAGES</option>
                 </select> 
+                <hr style="border:2px solid black">
                 <div id="side2-inner">
 
                 </div>
@@ -244,7 +246,7 @@
             let category=document.createElement("h2")
             category.innerText=element.category
             let price=document.createElement("h2")
-            price.innerText=element.price
+            price.innerText="₹"+element.price
             
             let button=document.createElement("button")
             button.innerText="Add to cart +"

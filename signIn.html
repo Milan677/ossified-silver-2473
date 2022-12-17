@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <style>
+        #container{
+            height:700px;
+            width:100%;
+            display: flex;
+            flex-direction: column;
+            
+        }
+        #sign-in{
+            height:65%;
+            width:25%;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            margin: auto;
+            text-align: center;
+            background-color: antiquewhite;
+            /* display:none */
+        }
+        #sign-in>div{
+            align-items: center;
+            justify-content: center;
+            line-height: 5px;
+            color: red;
+        }
+        #sign-in>h1{
+            font-size: 40px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .fa-user{
+            font-size: 50px;
+            padding-top: 10px;
+        }
+
+        /* form */
+        form{
+           width:80%;
+           margin-left: 20px;
+        }
+        form label{
+            display: flex;
+            margin-top: 20px;
+            font-size: 20px;
+        }
+        form input{
+            width:100%;
+            padding:10px;
+            border-radius: 6px;
+        }
+        input[type="submit"]{
+            width:108%;
+            margin-top: 20px;
+            background-color: red;
+            color: aliceblue;
+            font-size: 20px;
+        }
+        input[type="submit"]:hover{
+            background-color: rgb(198, 54, 54);
+        }
+
+        /* top button */
+        #container>div:nth-child(1){
+            display: flex;
+        }
+         button{
+            margin: auto;
+            padding:20px 30px;
+            font-size: 20px;
+            border-radius: 30px;
+            color:green;
+            border:none;
+            display:none
+        } 
+
+    </style>
+</head>
+<body>
+    <div id="container">
+         <div><button id="btn"><i class="fa-regular fa-circle-check"></i> sign-in successfully</i></button></div>
+
+        <div id="sign-in">
+            <div>
+                <i class="fa-solid fa-user"></i>
+                <h1>sign in</h1>
+                <hr style="border-color:red;">
+            </div>
+            <form id="form2" action="">
+                <label for="">Email</label>
+                <input type="email" placeholder="Enter your email" id="email">
+                 <label for="">Password</label>
+                 <input type="password" placeholder="Enter your password"id="password">
+                 <input type="submit"value="Submit">
+                 <p>Not have an account?<a href="signup.html">Sign up Here</a></p>
+            </form>
+            
+        </div>
+        
+        
+    </div>
+</body>
+</html>
+<script>
+    let LSdata=JSON.parse(localStorage.getItem("account-data"))
+    let form2=document.getElementById("form2")
+    console.log(LSdata)
+    
+    form2.addEventListener("submit",(e)=>{
+       e.preventDefault();
+       LSdata.forEach((element,index)=>{
+        if(form2.email.value==element.email){
+           if(form2.password.value==element.password){
+            let btn=document.getElementById("btn")
+            btn.style.display="inline"
+            setTimeout(()=>{
+                window.open("home.html")
+            },2000)
+                // window.open("home.html")
+               
+           } 
+           else{
+             alert("email & password did not match") 
+           }
+        }else{
+           
+             alert("email & password did not match")
+        }
+       })   
+    })
+  </script>
