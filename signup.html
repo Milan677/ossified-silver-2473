@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <style>
+        #container{
+            height:700px;
+            width:100%;
+            display: flex;
+
+        }
+        #sign-up{
+            height:95%;
+            width:25%;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            margin: auto;
+            text-align: center;
+            background-color: antiquewhite;
+            
+        }
+        #sign-up>div{
+            align-items: center;
+            justify-content: center;
+            line-height: 5px;
+            color: red;
+        }
+        #sign-up>h1{
+            font-size: 40px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .fa-user{
+            font-size: 50px;
+            padding-top: 10px;
+        }
+
+        /* form */
+        form{
+           width:80%;
+           margin-left: 20px;
+        }
+        form label{
+            display: flex;
+            margin-top: 20px;
+            font-size: 20px;
+        }
+        form input{
+            width:100%;
+            padding:10px;
+            border-radius: 6px;
+        }
+        input[type="submit"]{
+            width:108%;
+            margin-top: 20px;
+            background-color: red;
+            color: aliceblue;
+            font-size: 20px;
+        }
+        input[type="submit"]:hover{
+            background-color: rgb(198, 54, 54);
+
+        }
+       
+       
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="sign-up">
+            <div>
+                <i class="fa-solid fa-user"></i>
+                <h1>sign up</h1>
+                <hr style="border-color:red;">
+            </div>
+            <form  id="form"action="">
+                <label for="">Name</label>
+                <input  autocomplete="off" class="input"type="text" placeholder="Enter your name" id="name">
+                <label for="">Email</label>
+                <input  autocomplete="off" class="input"type="email" placeholder="Enter your email" id="email">
+                 <label for=""> Create Password</label>
+                 <input  class="input" type="password" placeholder="Enter your password" id="password">
+                 <label for=""> Confirm Password</label>
+                 <input  type="password" placeholder="Enter your  Confirmed password">
+                 <input disabled type="submit"value="Submit" id="submit">
+                 <p>By clicking the sign up button, you agree to our<a href="#">Term and condition</a> and <a href="#">Privacy pololicy</a></p>
+                 <p>Alredy have an account?<a href="signIn.html">Sign in Here</a></p>
+            </form>
+            
+        </div>
+        
+        
+    </div>
+</body>
+</html>
+<script>
+    let form=document.getElementById("form")
+     let submit=document.getElementById("submit")
+    let name=document.getElementById("name")
+    let emeil=document.getElementById("email")
+    let password=document.getElementById("password")
+    name.addEventListener("keyup",(e)=>{
+        const value=e.currentTarget.value
+        if(value===""){
+            submit.disabled=true
+        }else{
+            submit.disabled=false
+        }
+
+    })
+    email.addEventListener("keyup",(e)=>{
+        const value=e.currentTarget.value
+        if(value===""){
+            submit.disabled=true
+        }else{
+            submit.disabled=false
+        }
+
+    })
+   
+
+
+
+
+
+    
+    form.addEventListener("submit",(e)=>{
+      e.preventDefault();
+      let obj={
+        name:form.name.value,
+        email:form.email.value,
+        password:form.password.value,
+      }
+      let LSdata=JSON.parse(localStorage.getItem("account-data"))
+      if(LSdata==null){
+        LSdata=[]
+    
+      }
+      LSdata.push(obj)
+      localStorage.setItem("account-data",JSON.stringify(LSdata))
+        window.open("signIn.html")
+    })
+</script>
